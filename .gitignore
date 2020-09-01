@@ -1,0 +1,8 @@
+# 依赖包
+node_modules
+
+# 开发工具配置
+.vscode
+
+# lock文件
+package-lock.json

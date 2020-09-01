@@ -1,0 +1,31 @@
+{
+  "name": "frontend-tools",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  },
+  "description": "前端开发过程中需要用到的工具。",
+  "main": "readme.md",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouhsnaux/frontend-tools.git"
+  },
+  "keywords": [
+    "front-end tools"
+  ],
+  "author": "小凡",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ouhsnaux/frontend-tools/issues"
+  },
+  "homepage": "https://github.com/ouhsnaux/frontend-tools#readme"
+}
