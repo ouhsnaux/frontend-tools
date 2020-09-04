@@ -149,7 +149,7 @@ eslint -c myconfig.json myfiletotest.js
 
 ### 继承 extends
 
-可以继承基础配置、流行配置或插件中的配置，流行配置或插件首先需要安装相应的 `npm` 包。属性值可以是配置字符串或配置字符串组成的数组。流行配置可以省略前缀 `eslint-config-` ，插件中的配置包括四部分：
+可以继承基础配置、流行配置（[列表](https://www.npmjs.com/search?q=eslint-config)）或插件中的配置，流行配置或插件首先需要安装相应的 `npm` 包。属性值可以是配置字符串或配置字符串组成的数组。流行配置可以省略前缀 `eslint-config-` ，插件中的配置包括四部分：
 * plugin:
 * 包名 (可省略前缀 `eslint-plugin-`，比如，`react`)
 * /
@@ -255,8 +255,14 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    // 函数括号前不加空格
+    "space-before-function-paren": [2, "never"],
+
     // 不检测换行符
     'linebreak-style': 0,
+
+    // 箭头函数 参数只在需要的时候添加括号
+    "arrow-parens": [2, "as-needed"],
   },
 };
 ```
@@ -275,6 +281,9 @@ module.exports = {
   ],
   "plugins": ["vue"],
   "rules": {
+    // vue 项目 需要使用 new
+    "no-new": [0],
+
     // 超过3个属性要分行，每行最多一个
     "vue/max-attributes-per-line": ["error", {
       "singleline": 3,
