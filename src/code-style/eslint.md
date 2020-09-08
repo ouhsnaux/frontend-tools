@@ -2,7 +2,7 @@
 
 ## 作用
 
-保证团队代码风格的一致和避免错误。
+保证团队代码风格的一致，提高代码质量和避免错误。
 
 ## 项目中如何使用
 
@@ -183,6 +183,26 @@ eslint -c myconfig.json myfiletotest.js
 }
 ```
 
+### 设置 settings
+
+在 `webpack` 中配置别名后，`eslint`无法根据别名找到对应的包，从而报错，解决方法如下：
+
+1. 首先需要安装 `eslint-import-resolver-webpack` npm 包
+
+2. 在 `.eslintrc.js` 中添加 `settings` 配置
+
+```
+{
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: './build/local.config.js', // 你本地的 webpack 配置
+      },
+    }
+  }
+}
+```
+
 ## 检测文件是否符合规范
 
 * 检测指定文件 `eslint ./test.js`
@@ -282,6 +302,13 @@ module.exports = {
     // 箭头函数 参数只在需要的时候添加括号
     "arrow-parens": [2, "as-needed"],
   },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: './build/local.config.js', // 你本地的 webpack 配置
+      },
+    },
+  },
 };
 ```
 
@@ -326,7 +353,14 @@ module.exports = {
       还需要配置 在编辑器中配置 "vetur.validation.template": false */
       "x-invalid-end-tag": false,
     }],
-  }
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: './build/local.config.js', // 你本地的 webpack 配置
+      },
+    },
+  },
 }
 ```
 
