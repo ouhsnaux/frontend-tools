@@ -1,24 +1,18 @@
 module.exports = {
+  root: true,
   env: {
     node: true,
-    browser: true,
-    es2020: true,
   },
-  extends: [
-    'eslint:recommended',
-    'prettier',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/prettier'],
   parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
+    parser: 'babel-eslint',
   },
   rules: {
     'prettier/prettier': [
       'error',
       {
         singleQuote: true,
-        trailingCommas: 'es5',
+        trailingComma: 'es5',
         arrowParens: 'always',
         htmlWhitespaceSensitivity: 'ignore',
       },
@@ -27,8 +21,8 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: './build/local.config.js', // 你本地的 webpack 配置
+        config: './build/local.config.js',
       },
-    },
-  },
-};
+    }
+  }
+}
