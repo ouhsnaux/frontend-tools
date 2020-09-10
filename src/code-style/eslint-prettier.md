@@ -14,7 +14,8 @@
 
 ## 合并使用
 
-冲突部分格式化使用 `prettier` 。安装 `eslint-config-prettier` 包，并在 `.eslintrc.js`中引入。
+冲突部分格式化使用 `prettier` 。
+使用配置 `eslint-config-prettier` 和插件 `eslint-plugin-prettier`，并在 `.eslintrc.js`中引入。
 
 ### 普通项目
 
@@ -72,5 +73,9 @@
       },
     };
     ```
+
+### vue 项目
+
+使用 vue-cli 创建项目
 
 ## 参考文献

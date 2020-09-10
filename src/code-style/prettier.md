@@ -54,7 +54,8 @@ modules.exports = {
   bracketSpacing: true, // 对象声明的花括号前后输出空格
   jsxBracketSameLine: false, // 多行JSX元素位于最后一个元素的末尾
   arrowParens: 'always', // 箭头函数只有一个参数时添加括号， avoid|always 2.0.0之前默认值是avoid
-  endOfLine: 'lf', 换行符，lf|crlf|cr|auto，2.0.0之前是auto
+  endOfLine: 'lf', // 换行符，lf|crlf|cr|auto，2.0.0之前默认值是auto
+  htmlWhitespaceSensitivity: 'css', // 空格敏感度 css|strict|ignore，推荐ignore
 }
 ```
 
@@ -66,6 +67,7 @@ modules.exports = {
 singleQuote: true,
 trailingCommas: "es5",
 arrowParens: 'always',
+htmlWhitespaceSensitivity: 'ignore',
 ```
 
 ## 参考文献
