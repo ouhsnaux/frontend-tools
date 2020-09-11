@@ -170,6 +170,24 @@ eslint -c myconfig.json myfiletotest.js
 }
 ```
 
+推荐使用 `eslint-plugin-import` 来规范 `import`的使用，使用方式
+
+1. 安装 `npm` 包
+1. 在 `plugins` 中引入
+
+    ```
+    "plugins": ["import"]
+    ```
+
+1. 在 `extends` 中继承规则
+
+    ```
+    "extends": [
+      "plugins:import/errors",
+      "plugins:import/warnings",
+    ]
+    ```
+
 ### 继承 extends
 
 可以继承基础配置、流行配置（[列表](https://www.npmjs.com/search?q=eslint-config)）
