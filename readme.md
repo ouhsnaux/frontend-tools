@@ -3,7 +3,7 @@
 前端开发过程中需要用到的工具。包括：
 
 1. `editorConfig`
-1. 包管理工具 `npm/cnpm/npx/yarn`
+1. 包管理工具 `npm`
 1. 格式化工具 `eslint/prettier`
 1. 代码打包工具 `webpack`
 1. 代码转译工具 `babel`
