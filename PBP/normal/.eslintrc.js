@@ -24,6 +24,7 @@ module.exports = {
         singleQuote: true,
         trailingCommas: 'es5',
         arrowParens: 'always',
+        endOfLine: 'auto',
         htmlWhitespaceSensitivity: 'ignore',
       },
     ],
