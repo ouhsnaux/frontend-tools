@@ -10,7 +10,7 @@
 
 1. `eslint` 高可配，团队可根据自己的喜好设置代码风格，而 `prettier` 基本不可配，大一统代码规范。
 
-1. `eslint` 除专注代码规范外，还涉及代码质量和低级 bug 的提示，比如：“字段未使用”、“字段未使用”……
+1. `eslint` 除专注代码规范外，还涉及代码质量和低级 bug 的提示，比如：“字段未定义”、“字段未使用”……
 
 ## 合并使用
 
@@ -66,8 +66,10 @@
           'error',
           {
             singleQuote: true,
-            trailingCommas: 'es5',
+            trailingCommas: "es5",
             arrowParens: 'always',
+            endOfLine: 'auto',
+            htmlWhitespaceSensitivity: 'ignore',
           },
         ],
       },
@@ -76,6 +78,6 @@
 
 ### vue 项目
 
-使用 vue-cli 创建项目
+使用 vue-cli 创建项目，并选择 `eslint + prettier`
 
 ## 参考文献
