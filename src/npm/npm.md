@@ -57,23 +57,56 @@
 
 ### 版本
 
-包的版本号有三位，A.B.C
+包的版本号有三位，`A.B.C`
 
-* A = Major releases，主版本，不同主版本的代码不保证兼容
-* B = Minor releases，次版本，增加了新功能
-* C = Patch releases，补丁版本，bug修复
+* `A = Major releases`，主版本，不同主版本的代码不保证兼容
+* `B = Minor releases`，次版本，增加了新功能
+* `C = Patch releases`，补丁版本，bug修复
 * 后缀，引用不同开发阶段的代码，下面是一些约定，不一定严格遵守
-  * alpha 内测
-  * beta  公测
-  * rc    预览
+  * `alpha` 内测
+  * `beta`  公测
+  * `rc`    预览
 
 引用程序版本号的几种书写方式
 
 * 不论版本号 `*` 或 `x`。
 * 固定主版本 `1` 或 `1.x` 或 `^1.0.0`
-* 固定主版本与测版本 `1.0` 或 `1.0.x` 或 `~1.0.0`
+* 固定主版本与次版本 `1.0` 或 `1.0.x` 或 `~1.0.0`
 * 固定版本号 `1.0.0`
 * 不同开发阶段的代码 `1.0.0-beta`
+
+## `package.json` 配置
+
+### npm scripts
+
+为执行脚本提供快捷命令。
+
+package.json
+
+```npm
+{
+  // ...
+  "scripts": {
+    "lint": "eslint --fix"
+  }
+}
+```
+
+这里执行的命令会把 `node_modules/.bin` 当作执行路径。
+相当于在命令行中输入 `./node_modules/.bin/eslint --fix` 。
+
+执行顺序，`&` 多个命令并行执行，`&&` 同步执行。
+
+钩子 `pre` 和 `post`
+
+```
+"build": "npm run prebuild && npm run build && npm run postbuild"
+
+// 相当于
+"prebuild": "",
+"build": "",
+"postbuild": "",
+```
 
 ## 其它
 
