@@ -13,6 +13,8 @@
     ```
     root = true
 
+    [*]
+
     end_of_line = LF
     charset = utf-8
     max_line_length = 100

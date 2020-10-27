@@ -221,7 +221,31 @@ eslint -c myconfig.json myfiletotest.js
 
 在 `webpack` 中配置别名后，`eslint`无法根据别名找到对应的包，从而报错，解决方法如下：
 
-1. 首先需要安装 `eslint-import-resolver-webpack` npm 包
+第一种：直接配置
+
+1. 安装 `eslint-plugin-import` 和 `eslint-import-resolver-alias`。
+
+2. 在 `.eslintrc.js` 中添加 `settings` 配置。
+
+    ```
+    module.exports = {
+      plugins: ["import"],
+      settings: {
+        "import/resolver": {
+          alias: {
+            map: [
+              ["@", "./src"],
+            ],
+            extensions: [".vue", ".json", ".js"]
+          }
+        }
+      }
+    }
+    ```
+
+第二种：引入 `webpack` 配置
+
+1. 首先需要安装 `eslint-plugin-import` 和 `eslint-import-resolver-webpack` npm 包
 
 2. 在 `.eslintrc.js` 中添加 `settings` 配置
 
