@@ -319,6 +319,21 @@ eslint -c myconfig.json myfiletotest.js
 
 `eslint --fix`
 
+## 与git结合
+
+在执行 `git commit` 命令时，对代码进行检测或修复。
+首先安装 `pre-commit` 包，然后修改 `package.json`。
+
+```
+{
+  "scripts": {
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint --fix ./src",
+  },
+  "pre-commit": ["eslint"] // 或"eslint:fix"
+}
+```
+
 ## 参考文献
 
 [eslint 中文网](https://cn.eslint.org/)
