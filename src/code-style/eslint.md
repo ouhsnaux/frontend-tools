@@ -60,7 +60,7 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "root": true
+  'root': true
 }
 ```
 
@@ -72,9 +72,9 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "env": {
+  'env': {
     // 支持 es6 全局变量
-    "es6": true
+    'es6': true
   }
 }
 ```
@@ -91,7 +91,7 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "parser": "babel-eslint"
+  'parser': 'babel-eslint'
 }
 
 ```
@@ -113,11 +113,11 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true
     }
   }
 }
@@ -135,10 +135,10 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "rules": {
-    "eqeqeq": "off", // 关闭规则
-    "curly": 2, // 打开规则
-    "vue/order-in-components": 0 // 关闭vue插件里的规则
+  'rules': {
+    'eqeqeq': 'off', // 关闭规则
+    'curly': 2, // 打开规则
+    'vue/order-in-components': 0 // 关闭vue插件里的规则
   }
 }
 ```
@@ -149,7 +149,7 @@ eslint -c myconfig.json myfiletotest.js
 {
   rules: {
     // 为规则 quotes 指定了 “double” 选项
-    "quotes": ["error", "double"]
+    'quotes': ['error', 'double']
   }
 }
 ```
@@ -163,9 +163,9 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "plugins": [
-    "eslint-plugin-plugin1", // 插件名
-    "plugin1" // 省略 eslint-plugin- 前缀
+  'plugins': [
+    'eslint-plugin-plugin1', // 插件名
+    'plugin1' // 省略 eslint-plugin- 前缀
   ]
 }
 ```
@@ -176,15 +176,15 @@ eslint -c myconfig.json myfiletotest.js
 1. 在 `plugins` 中引入
 
     ```
-    "plugins": ["import"]
+    'plugins': ['import']
     ```
 
 1. 在 `extends` 中继承规则
 
     ```
-    "extends": [
-      "plugins:import/errors",
-      "plugins:import/warnings",
+    'extends': [
+      'plugins:import/errors',
+      'plugins:import/warnings',
     ]
     ```
 
@@ -204,15 +204,15 @@ eslint -c myconfig.json myfiletotest.js
 
 ```
 {
-  "extends: [
+  extends: [
     // 基础配置
-    "eslint:recommended",
+    'eslint:recommended',
 
     // eslint-config-airbnb-base 省略了前缀的配置
-    "airbnb-base",
+    'airbnb-base',
 
     // eslint-plugin-vue 插件中的 recommended 配置
-    "plugin:vue/recommended"
+    'plugin:vue/recommended'
   ]
 }
 ```
@@ -229,14 +229,14 @@ eslint -c myconfig.json myfiletotest.js
 
     ```
     module.exports = {
-      plugins: ["import"],
+      plugins: ['import'],
       settings: {
-        "import/resolver": {
+        'import/resolver': {
           alias: {
             map: [
-              ["@", "./src"],
+              ['@', './src'],
             ],
-            extensions: [".vue", ".json", ".js"]
+            extensions: ['.vue', '.json', '.js']
           }
         }
       }

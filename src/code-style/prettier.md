@@ -65,7 +65,7 @@ modules.exports = {
 
 ```
 singleQuote: true,
-trailingCommas: "es5",
+trailingCommas: 'es5',
 arrowParens: 'always',
 endOfLine: 'auto',
 htmlWhitespaceSensitivity: 'ignore',
