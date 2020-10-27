@@ -397,7 +397,7 @@ webpack.config.js
   （`serve` : 将资源作为`server` 的可访问文件）
 
   `webpack-dev-server` 在编译后不会写入到任何输出文件。
-  而是将 `bundle` 文件保留到内存中，然后将他们 `serve` 到 `server` 中，就好像他们是挂载在 `server` 根路径上的真是文件一样。
+  而是将 `bundle` 文件保留到内存中，然后将他们 `serve` 到 `server` 中，就好像他们是挂载在 `server` 根路径上的真实文件一样。
   如果你的页面希望在其它不同路径中找到 `bundle` 文件，则可以通过`dev server` 配置中的 `publicPath` 选项进行修改。
 
 * `webpack-dev-middleware`
