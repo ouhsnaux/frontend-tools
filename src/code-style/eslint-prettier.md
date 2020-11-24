@@ -66,7 +66,7 @@
           'error',
           {
             singleQuote: true,
-            trailingCommas: 'es5',
+            trailingComma: 'es5',
             arrowParens: 'always',
             endOfLine: 'auto',
             htmlWhitespaceSensitivity: 'ignore',

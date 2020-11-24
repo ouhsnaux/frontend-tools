@@ -50,7 +50,7 @@ modules.exports = {
   singleQuote: false, // 使用单引号
   quoteProps: 'as-needed', // 对象属性加引号，as-needed|consistent|preserve
   jsxSingleQuote: false, // 在JSX中使用单引号
-  trailingCommas: , // 尾逗号，none|es5|all, 2.0.0之前默认值是none
+  trailingComma: , // 尾逗号，none|es5|all, 2.0.0之前默认值是none
   bracketSpacing: true, // 对象声明的花括号前后输出空格
   jsxBracketSameLine: false, // 多行JSX元素位于最后一个元素的末尾
   arrowParens: 'always', // 箭头函数只有一个参数时添加括号， avoid|always 2.0.0之前默认值是avoid
@@ -65,7 +65,7 @@ modules.exports = {
 
 ```
 singleQuote: true,
-trailingCommas: 'es5',
+trailingComma: 'es5',
 arrowParens: 'always',
 endOfLine: 'auto',
 htmlWhitespaceSensitivity: 'ignore',
