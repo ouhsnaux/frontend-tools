@@ -22,7 +22,7 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'es5',
         arrowParens: 'always',
-        endOfLine: 'true',
+        endOfLine: 'auto',
         htmlWhitespaceSensitivity: 'ignore',
       },
     ],
